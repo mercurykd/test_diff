@@ -2,18 +2,18 @@
 	class seo_texts_app_controller extends app_controller {
 
 		/**
-		 * Äèñïåò÷åð ìîäóëÿ
+		 * Ð”Ð¸ÑÐ¿ÐµÑ‚Ñ‡ÐµÑ€ Ð¼Ð¾Ð´ÑƒÐ»Ñ
 		 */
 		public function __dispatch($uri) {
 			return false;
 		}
 		
 		/**
-		 * Ìåòîä ïîñòðîåíèÿ áëîêà ñ SEO òåêñòàìè
+		 * ÐœÐµÑ‚Ð¾Ð´ Ð¿Ð¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ñ Ð±Ð»Ð¾ÐºÐ° Ñ SEO Ñ‚ÐµÐºÑÑ‚Ð°Ð¼Ð¸
 		 */
 		public function block($city_id, $type_id, $category_id = 0) {
 				
-			// ïîëó÷àåì äàííûå
+			// Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ
 			$data = $this->seo_texts->getItem($city_id, $type_id, $category_id);
 			if(empty($data)) {
 				return '';
